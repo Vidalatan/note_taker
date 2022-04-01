@@ -101,7 +101,7 @@ encouraged to assist in any way applicable to your skills!
 
 ![Finished Project Image](./Assets/Images/FinishedProductImage.png)
 
-Link to live [Note Taker](https://{git-username}.github.io/{project-name})
+Link to live [Note Taker](https://note-taker-alpha.herokuapp.com/)
 
-Link to [Code Repository](https://github.com/{git-username}/{project-name})
+Link to [Code Repository](https://github.com/vidalatan/note_taker)
 
