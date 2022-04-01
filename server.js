@@ -1,9 +1,8 @@
-const fs = require('fs');
 const db = require('./db/db.json');
 const express = require('express');
 const editJsonFile = require('edit-json-file');
 const path = require('path');
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 dbfile = editJsonFile(`./db/db.json`)

@@ -1,140 +1,107 @@
-# 11 Express.js: Note Taker
+# Note Taker
 
-## Your Task
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+## Description
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+A lightweight application to allow you to write, save, and reload notes. It is intended to have this application hosted on some form of platform (at the time of writing this: 'Heroku'). This 'Note Taker' app also has the ability to delete notes that are no longer useful. 
 
+This project uses [Express](https://github.com/expressjs/express), [Inquirer](https://github.com/SBoudrias/Inquirer.js/) to create prompts, and [edit-json-file](https://github.com/IonicaBizau/edit-json-file) to allow quick and easy modification of the db.json file.
+## Table of Contents
 
-## User Story
+1.  [Installation](#installation)
 
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
+2.  [Usage](#usage)
 
+3.  [License](#license)
 
-## Acceptance Criteria
+4.  [Contributing](#contributing)
 
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+5.  [Tests](#tests)
 
+6.  [Questions](#questions)
 
-## Mock-Up
+7.  [Finished Product](#finished-product)
 
-The following images show the web application's appearance and functionality:
+---
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
+## [Installation](#installation)
+<!-- Here you should enter how to install your project. You can use the outline below, or create one yourself -->
+<!-- If you would like to have images in your instructions, enclose them like so: ![Image name](image link or relative path) -->
 
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
-
-
-## Getting Started
-
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-
-
-## Bonus
-
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
-
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
-
-
-## Grading Requirements
-
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+<!-- Make sure to have a '>' character before each new line -->
+>## Step One
+>Clone or Download
 >
-> * A repository that has no code
+>You can clone the repo from github, or download the files as a zip and unzip them onto your computer. Both of these options should be available when you click the green button on the top right of this repo.
+
+>## Step Two
+>Install Dependencies
 >
-> * A repository that includes a unique name but nothing else
+>Once you have everything, open a terminal on the location of the note_taker directory and enter 'npm install'. This should start the process of installing all modules required to run this app.
+
+>## Step Three
+>Verify installation
 >
-> * A repository that includes only a README file but nothing else
+>Last, once npm has finished installing dependencies, double check that there were no issues from the message that is printed to your terminal. If there were no warnings or issues, you should be good to go from there.
+
+## [Usage](#usage)
+<!-- Here you should enter how to use your project. You can use the outline below, or create one yourself -->
+<!-- If you would like to have images in your how to, enclose them like so ![Image name](image link or relative path) -->
+
+<!-- Make sure to have a '>' character before each new line -->
+>## Step One
+>Open a terminal
 >
-> * A repository that only includes starter code
+>Open a terminal at the location of the note_taker directory.
 
-This homework is graded based on the following criteria: 
+>## Step Two
+>Run the application
+>
+>As long as you have 'node' installed, you only need to run the command 'node server.js'. This should cause the site to start and you should see 'Listening' printed to the terminal.
 
+>## Step Three
+>Open Note Taker in Browser
+>
+>From here, if you are running this locally, navigate to your localhost domain at port 3001: http://localhost:3001
+>
+>If you are running this from another platform, then navigate to that domain.
 
-### Technical Acceptance Criteria: 40%
+>## Step Four
+>Use the App
+>
+>From here, you should have the ability to use the application. You can create new notes with the plus button at the top right, save the note you are currently working on with the save button (which only appears when you have a title and some text), review notes by clicking on them on the left hand side, or delete notes with the red trashbin icon.
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+---
 
-  * Application front end must connect to an Express.js back end.
+## [License](#license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  * Application back end must store notes that have a unique id in a JSON file.
+ Copyright (c) 2022 Vidalatan Licensed under the MIT License license.
 
-  * Application must be deployed to Heroku.
+---
 
+## [Contributing](#contributing)
 
-### Deployment: 36%
+Thank you for considering contributing to this project!
 
-* Application deployed at live URL.
+Following these contributing guidelines helps communicate that you respect the time of those who are managing and developing this open source project.
+In return, you should recieve that same respect back in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-* Application loads with no errors.
+There are many ways to contribute from documentation, tutorials, social media, but reports, feature requests or submitting your own code. Please feel 
+encouraged to assist in any way applicable to your skills!
 
-* Application GitHub URL submitted.
+---
 
-* GitHub repository contains application code.
+## [Questions](#questions)
 
+ Questions regarding this project should be directed towards @Vidalatan at Vidalatan@gmail.com
 
-### Application Quality: 11%
+## [Finished Product](#finished_product)
 
-* Application console is free of errors.
+![Finished Project Image](./Assets/Images/FinishedProductImage.png)
 
+Link to live [Note Taker](https://{git-username}.github.io/{project-name})
 
-### Repository Quality: 13%
+Link to [Code Repository](https://github.com/{git-username}/{project-name})
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-### Bonus: +10 Points
-
-* Application allows users to delete notes.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
